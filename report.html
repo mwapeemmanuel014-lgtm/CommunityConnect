@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Issue | CommunityConnect</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">CommunityConnect</a>
+      <button class="nav-toggle" aria-label="Open navigation menu">☰</button>
+      <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="report.html" class="active">Report Issue</a>
+        <a href="reports.html">Reports</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container form-section">
+      <div class="form-panel">
+        <div class="form-intro">
+          <p class="eyebrow">Submit an Issue</p>
+          <h1>Report a Community Concern</h1>
+          <p>Fill out the form below to send a report to local authorities and help your community stay safe and clean.</p>
+        </div>
+
+        <form id="issueForm" class="report-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name (optional)</label>
+            <input type="text" id="name" name="name" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="location">Location <span class="required">*</span></label>
+            <input type="text" id="location" name="location" placeholder="Neighborhood, street, or landmark" required />
+            <span class="error-message" id="locationError"></span>
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+              <option value="Safety">Safety</option>
+              <option value="Sanitation">Sanitation</option>
+              <option value="Water">Water</option>
+              <option value="Infrastructure">Infrastructure</option>
+              <option value="Electricity">Electricity</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="description">Description <span class="required">*</span></label>
+            <textarea id="description" name="description" rows="5" placeholder="Describe the issue in detail" required></textarea>
+            <span class="error-message" id="descriptionError"></span>
+          </div>
+          <div class="form-group">
+            <label for="image">Image Upload (optional)</label>
+            <input type="file" id="image" name="image" accept="image/*" />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Report</button>
+          <div id="formMessage" class="form-message"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>CommunityConnect © 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

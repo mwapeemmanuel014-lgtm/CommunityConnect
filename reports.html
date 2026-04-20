@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports | CommunityConnect</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">CommunityConnect</a>
+      <button class="nav-toggle" aria-label="Open navigation menu">☰</button>
+      <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="report.html">Report Issue</a>
+        <a href="reports.html" class="active">Reports</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container reports-section">
+      <div class="reports-header">
+        <div>
+          <p class="eyebrow">Community Reports</p>
+          <h1>Submitted Issues</h1>
+          <p>Review the latest reports submitted by community members.</p>
+        </div>
+        <div class="filter-box">
+          <label for="categoryFilter">Filter by Category</label>
+          <select id="categoryFilter">
+            <option value="All">All</option>
+            <option value="Safety">Safety</option>
+            <option value="Sanitation">Sanitation</option>
+            <option value="Water">Water</option>
+            <option value="Infrastructure">Infrastructure</option>
+            <option value="Electricity">Electricity</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div id="reportsList" class="reports-grid"></div>
+      <p id="noReports" class="empty-state">No reports yet. Submit an issue to get started.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>CommunityConnect © 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
